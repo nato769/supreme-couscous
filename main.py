@@ -22,9 +22,9 @@ items = {
     "drink d": "Fruit Juices",
     "drink e": "Sparkling Juice",
     "drink f": "Tropicana",
-    "drink 6": "Red Peach",
-    "drink 7": "Citrus Burst",
-    "drink 8": "Mango Madness",
+    "drink g": "Red Peach",
+    "drink h": "Citrus Burst",
+    "drink i": "Mango Madness",
 }
 descript = {
     "descript 0": "Homemade Beer Batter OR Pan-fried W lemon butter. Served W French fries A salad & Tartare sauce.",
@@ -36,6 +36,42 @@ descript = {
     "descript 6": "Slow cooked with onion, tomato, bay leaves, red wine & rosemary, placed on creamy mash.",
     "descript 7": "Served W French Fries & Salad. Grilled to your liking",
     "descript 8": "Five Spice Pork belly slow cooked with malt vinegar' & bourbon glaze Served on pumpkin mash W crispy crackling & kumara chips and Vegetables",
+    "descript a": "See Options",
+    "descript b": "See Options",
+    "descript c": "See Options",
+    "descript d": "See Options",
+    "descript e": "See Options",
+    "descript f": "Orange cranberry and pineapple juice with a delicious layer of passionfruit puree",
+    "descript g": "Peach nectar lemonade grenadine and fresh lemon juice",
+    "descript h": "Mango nectar orange juice and apple juice",
+    "descript i": "Mango nectar cranberry juice and fresh lime",
+}
+items = {
+    "opt a": "Coke/L&P/Sprite/Ginger Beer/Tonic Water/ Lime and soda/Lemon Lime and Bitters",
+    "opt b": "Ginger Beer/ Feijoa and Pear/ Mandarin/ Lime and Bitters/ Lemon and Rhubarb",
+    "opt c": "Regular or sugar free",
+    "opt d": "Orange/Apple/Cranberry/Pineapple/Tomato/Mango/Peach",
+    "opt e": "Blackcurrent/Passionfruit"
+}
+cost = {
+    "cost 0": "M $26.50 / L $33.00",
+    "cost 1": "$29.50",
+    "cost 2": "$26.50",
+    "cost 3": "$25.50",
+    "cost 4": "$22.50",
+    "cost 5": "$22.50",
+    "cost 6": "S $22.50 / D $32.50",
+    "cost 7": "$29.00",
+    "cost 8": "$30.00",
+    "cost a": "$6",
+    "cost b": "$7",
+    "cost c": "$7.50",
+    "cost d": "$6.50",
+    "cost e": "$8.00",
+    "cost f": "$8.50",
+    "cost g": "$8.50",
+    "cost h": "$8.50",
+    "cost i": "$8.50",
 }
 #print(name["food 5"], descript["descript 5"])
 root.mainloop()
