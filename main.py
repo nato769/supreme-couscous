@@ -46,12 +46,12 @@ descript = {
     "descript h": "Mango nectar orange juice and apple juice",
     "descript i": "Mango nectar cranberry juice and fresh lime",
 }
-items = {
+opts = {
     "opt a": "Coke/L&P/Sprite/Ginger Beer/Tonic Water/ Lime and soda/Lemon Lime and Bitters",
     "opt b": "Ginger Beer/ Feijoa and Pear/ Mandarin/ Lime and Bitters/ Lemon and Rhubarb",
     "opt c": "Regular or sugar free",
     "opt d": "Orange/Apple/Cranberry/Pineapple/Tomato/Mango/Peach",
-    "opt e": "Blackcurrent/Passionfruit"
+    "opt e": "Blackcurrent/Passionfruit",
 }
 cost = {
     "cost 0": "M $26.50 / L $33.00",
@@ -73,5 +73,5 @@ cost = {
     "cost h": "$8.50",
     "cost i": "$8.50",
 }
-#print(name["food 5"], descript["descript 5"])
+
 root.mainloop()
