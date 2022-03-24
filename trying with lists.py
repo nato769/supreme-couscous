@@ -55,12 +55,12 @@ opt = [
     "Only one option",
     "Only one option",
     "Only one option",
+    "Only one option",
     "Coke/L&P/Sprite/Ginger Beer/Tonic Water/ Lime and soda/Lemon Lime and Bitters",
     "Ginger Beer/ Feijoa and Pear/ Mandarin/ Lime and Bitters/ Lemon and Rhubarb",
     "Regular or sugar free",
     "Orange/Apple/Cranberry/Pineapple/Tomato/Mango/Peach",
     "Blackcurrent/Passionfruit",
-    "Only one option",
     "Only one option",
     "Only one option",
     "Only one option"
@@ -87,8 +87,39 @@ cost = [
 ]
 for i in range(0,17):
     print((i+1), ".", item[i], "|", descript[i], "|", opt[i], "|", cost[i], )
-while True:
-    y = int(input("What item would you like to see in detail? "))
-    x = y-1
-    print(item[x], "|", descript[x], "|", opt[x], "|", cost[x], )
+'''iorb = ("Would you like to ")
+print(iorb)'''
+if iorb == "y":
+    while True:
+        try:
+            y = int(input("What item would you like to see in detail? "))
+            x = y-1
+            if x <=-1:
+                print("please input an integer from 1 to 17")
+                continue
+
+            print(item[x], "|", descript[x], "|", opt[x], "|", cost[x], )
+        except:
+            print("please input an integer from 1 to 17")
 root.mainloop()
+'''
+        try:
+            x = int(input("enter your row"))
+            y = int(input("enter your column"))
+            if x <= 3 and y <= 3:
+                break
+                a = False
+                print("computer is not happy with you, try picking a integer from 1 to 3")
+            row = int(x - 1)
+            column = int(y - 1)
+            while board[row][column] != " ":
+                break
+                print("that space is already taken")
+        except:
+            print("computer is not happy with you, try picking a integer from 1 to 3")
+
+'''
+'''try:
+  print(x)
+except:
+  print("An exception occurred")'''
