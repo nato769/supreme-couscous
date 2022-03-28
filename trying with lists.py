@@ -85,20 +85,60 @@ cost = [
     "$8.50",
     "$8.50",
 ]
+amount1 = 0
+amount2 = 0
+amount3 = 0
+amount4 = 0
+amount5 = 0
+amount6 = 0
+amount7 = 0
+amount8 = 0
+amount9 = 0
+amount10 = 0
+amount11 = 0
+amount12 = 0
+amount13 = 0
+amount14 = 0
+amount15 = 0
+amount16 = 0
+amount17 = 0
+def ui(data_type,data):
+    while True:
+        if data_type=='int':
+            i = int(input(data))
+        elif data_type=='str':
+            i = input(data)
+        break
+        except:
+            print("please input an iteger from 1 to 17")
+    return i
 for i in range(0,17):
     print((i+1), ".", item[i], "|", descript[i], "|", opt[i], "|", cost[i], )
-'''iorb = ("Would you like to ")
-print(iorb)'''
-if iorb == "y":
+iorb = input("Would you like to buy any items? b for buying items and d for looking in detail ")
+print(iorb)
+if iorb == "d":
     while True:
         try:
-            y = int(input("What item would you like to see in detail? "))
-            x = y-1
-            if x <=-1:
+            x = int(input("What item would you like to see in detail? "))
+            y = x-1
+            if y <=-1:
                 print("please input an integer from 1 to 17")
                 continue
 
             print(item[x], "|", descript[x], "|", opt[x], "|", cost[x], )
+        except:
+            print("please input an integer from 1 to 17")
+else:
+    while True:
+        try:
+            a = int(input("What item would you like to buy more of? "))
+            b = a-1
+            if x <=-1:
+                print("please input an integer from 1 to 17 for the item")
+                continue
+
+            print("deez")
+            print("buying", (iorb), "of item", (y))
         except:
             print("please input an integer from 1 to 17")
 root.mainloop()
