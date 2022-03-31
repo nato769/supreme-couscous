@@ -102,13 +102,15 @@ amount14 = 0
 amount15 = 0
 amount16 = 0
 amount17 = 0
+receipt = []
 def ui(data_type,data):
     while True:
-        if data_type=='int':
-            i = int(input(data))
-        elif data_type=='str':
-            i = input(data)
-        break
+        try:
+            if data_type=='int':
+                i = int(input(data))
+            elif data_type=='str':
+                i = input(data)
+            break
         except:
             print("please input an iteger from 1 to 17")
     return i
@@ -127,10 +129,39 @@ if iorb == "d":
 
             print(item[x], "|", descript[x], "|", opt[x], "|", cost[x], )
         except:
-            print("please input an integer from 1 to 17")
+            print("f please input an integer from 1 to 17")
 else:
     while True:
         try:
+            x = int(input("What item would you like to buy? "))
+            y = x - 1
+            if y <= -1:
+                print("please input an integer from 1 to 17")
+                continue
+            if y >= 17:
+                print("please input an integer from 1 to 17")
+                continue
+            a = int(input("How many of that item would you like? "))
+            b = a - 1
+            if b <= -1:
+                print("please input an integer from 1 to 10")
+                continue
+            if b >= 10:
+                print("please input an integer from 1 to 10")
+                continue
+            print(item[x],"x",(a),"\nadded to order")
+            #if (str(input("would you like to finish your order?"))) == "finish order":
+                
+
+
+        except:
+            print("f please input an integer from 1 to 17")
+
+        '''for i in range(ui('int', 'what item? ')):
+            list2.append(ui('int', "how many items?"))
+            continue'''
+    while True:
+        '''try:
             a = int(input("What item would you like to buy more of? "))
             b = a-1
             if x <=-1:
@@ -140,7 +171,7 @@ else:
             print("deez")
             print("buying", (iorb), "of item", (y))
         except:
-            print("please input an integer from 1 to 17")
+            print("please input an integer from 1 to 17")'''
 root.mainloop()
 '''
         try:
