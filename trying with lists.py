@@ -66,43 +66,28 @@ opt = [
     "Only one option"
 ]
 cost = [
-    "M $26.50 / L $33.00",
-    "$29.50",
-    "$26.50",
-    "$25.50",
-    "$22.50",
-    "$22.50",
-    "S $22.50 / D $32.50",
-    "$29.00",
-    "$30.00",
-    "$6",
-    "$7",
-    "$7.50",
-    "$6.50",
-    "$8.00",
-    "$8.50",
-    "$8.50",
-    "$8.50",
-    "$8.50",
+    "M 26.50 / L 33.00",
+    "29.50",
+    "26.50",
+    "25.50",
+    "22.50",
+    "22.50",
+    "S 22.50 / D 32.50",
+    "29.00",
+    "30.00",
+    "6",
+    "7",
+    "7.50",
+    "6.50",
+    "8.00",
+    "8.50",
+    "8.50",
+    "8.50",
+    "8.50",
 ]
-amount1 = 0
-amount2 = 0
-amount3 = 0
-amount4 = 0
-amount5 = 0
-amount6 = 0
-amount7 = 0
-amount8 = 0
-amount9 = 0
-amount10 = 0
-amount11 = 0
-amount12 = 0
-amount13 = 0
-amount14 = 0
-amount15 = 0
-amount16 = 0
-amount17 = 0
 receipt = []
+cost_stuff = []
+hjk=1
 def ui(data_type,data):
     while True:
         try:
@@ -130,10 +115,25 @@ if iorb == "d":
             print(item[x], "|", descript[x], "|", opt[x], "|", cost[x], )
         except:
             print("f please input an integer from 1 to 17")
-else:
+elif iorb == "b":
+    print("This is the system for buying items. \nYou can pick any integer from 1 to 4 at for each item. \nSay 0 to see all of the items on your current order. \nSay 18 when you have added all items to your order.")
     while True:
         try:
             x = int(input("What item would you like to buy? "))
+            if x == "0":
+                print("printing current order")
+                for i in receipt:
+                    print(i)
+            if x == 18:
+                c = str(input("Are you sure you want to finish your order? Say yes or no "))
+                if c == "yes":
+                    print("finishing order")
+                    break
+                elif c == "no":
+                    continue
+                else:
+                    print("please say yes or no")
+
             y = x - 1
             if y <= -1:
                 print("please input an integer from 1 to 17")
@@ -142,25 +142,46 @@ else:
                 print("please input an integer from 1 to 17")
                 continue
             a = int(input("How many of that item would you like? "))
+            if a == 0:
+                print("printing current order")
+                for i in receipt:
+                    print(i)
             b = a - 1
             if b <= -1:
-                print("please input an integer from 1 to 10")
+                print("please input an integer from 1 to 4")
                 continue
             if b >= 10:
-                print("please input an integer from 1 to 10")
+                print("please input an integer from 1 to 4")
                 continue
             print(item[x],"x",(a),"\nadded to order")
+            f = float(cost[x])*(a)
+            print("cost for that amount of the item $", f)
+            p = item[x],'x',(a), cost[x]
+            cost_stuff.append(f)
+            receipt.append(p)
+            hjk=2
+
+
             #if (str(input("would you like to finish your order?"))) == "finish order":
-                
+
 
 
         except:
             print("f please input an integer from 1 to 17")
+else: print("cringe")
 
-        '''for i in range(ui('int', 'what item? ')):
-            list2.append(ui('int', "how many items?"))
-            continue'''
-    while True:
+if hjk==2:
+    print("printing receipt")
+    for i in receipt:
+        print(i)
+    q = 0
+    for i in cost_stuff:
+        q = q + i
+    print("The final cost of everyhting is",q)
+'''for i in range(ui('int', 'what item? ')):
+    list2.append(ui('int', "how many items?"))
+    continue'''
+while True:
         '''try:
             a = int(input("What item would you like to buy more of? "))
             b = a-1
