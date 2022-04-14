@@ -107,7 +107,6 @@ optyn = [
 receipt = []
 cost_stuff = []
 hjk=0
-
 def ui(data_type,data):
     while True:
         try:
